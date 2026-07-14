@@ -1,0 +1,26 @@
+:root {
+  --color-correct: #6aaa64;
+  --color-present: #c9b458;
+  --color-absent: #787c7e;
+  --color-empty: #ffffff;
+  --color-filled: #d3d6da;
+  --color-border: #d3d6da;
+  --color-text: #1a1a1b;
+  --color-background: #ffffff;
+  --font-family: "Helvetica Neue", Arial, sans-serif;
+  --border-radius: 4px;
+  --transition: all 0.3s ease;
+}
+.game {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+ 
+@media (max-width: 768px) {
+  .tile {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+}
