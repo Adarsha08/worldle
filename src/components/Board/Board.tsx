@@ -19,6 +19,7 @@ const Board: React.FC<BoardProps> = ({
   isRevealing
 }) => {
   const createRow = (guess: GameGuess | string, isCurrentRow: boolean, rowIndex: number) => {
+   
     const tiles: JSX.Element[] = [];
     const maxLength = GAME_CONFIG.WORD_LENGTH;
  
@@ -76,9 +77,9 @@ const Board: React.FC<BoardProps> = ({
   };
  
   return (
-    <div className={styles.board}>
-      {renderBoard()}
-    </div>
+  <div style={{ }}>
+    {renderBoard()}
+  </div>
   );
 };
  

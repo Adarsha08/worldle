@@ -1,26 +1,16 @@
-import './App.css'
-import Board from './components/Board/Board'
-import { useWordle } from './hooks/useWordle'
+import { useState } from "react";
+import "./index.css";  // or whatever your global CSS file is called
+import Home from "./components/Home/Home";
+import GameScreen from "./components/Game/Game";   // your renamed file
 
 function App() {
-  const{newGame,currentGuess,guesses,isRevealing }=useWordle();
-  return (
-    <>
-      <div>
-        <header>
-          <h1>Worlde Game </h1>
-          <button onClick={newGame} >New Game </button>
-        </header>
-        <Board
-          guesses={guesses}
-          currentGuess={currentGuess}
-          currentAttempt={guesses.length}
-          isRevealing={false}
-        />
-        
-      </div>
-    </>
-  )
+  const [hasStarted, setHasStarted] = useState(false);
+
+  if (!hasStarted) {
+    return <Home onPlay={() => setHasStarted(true)} />;
+  }
+
+  return <GameScreen />;
 }
 
-export default App
+export default App;
