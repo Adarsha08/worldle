@@ -42,7 +42,6 @@ export const useWordle = (): UseWordleReturn => {
 
      const word = randomWord();
 
-  console.log("Target Word:", word);
   setTargetWord(word);
     setGuesses([]);
     setCurrentGuess("");
@@ -92,11 +91,7 @@ export const useWordle = (): UseWordleReturn => {
     const guessStates = checkGuess(currentGuess, targetWord);
     const newGuess = createGameGuess(currentGuess, guessStates);
 
-    console.log("Current Guess:", currentGuess);
-    console.log(
-      "Is Won:",
-      isGameWon(currentGuess, targetWord)
-    );
+    
 
     // Add guess
     setGuesses((prev) => [...prev, newGuess]);

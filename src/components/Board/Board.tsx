@@ -77,7 +77,7 @@ const Board: React.FC<BoardProps> = ({
   };
  
   return (
-  <div style={{ }}>
+  <div >
     {renderBoard()}
   </div>
   );
