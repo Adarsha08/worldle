@@ -1,5 +1,5 @@
 import { VALID_WORD_SET } from "../data/wordlist";
-import { TARGET_WORDS, type TargetWord } from "../data/wordlist";
+import { TARGET_WORDS } from "../data/wordlist";
 import { TileState, type GameGuess } from "../types/game";
 
 export const randomWord = () => {

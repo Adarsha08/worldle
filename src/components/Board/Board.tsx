@@ -18,7 +18,7 @@ const Board: React.FC<BoardProps> = ({
   currentAttempt,
   isRevealing
 }) => {
-  const createRow = (guess: GameGuess | string, isCurrentRow: boolean, rowIndex: number) => {
+  const createRow = (guess: GameGuess | string, rowIndex: number) => {
    
     const tiles: JSX.Element[] = [];
     const maxLength = GAME_CONFIG.WORD_LENGTH;
@@ -60,17 +60,17 @@ const Board: React.FC<BoardProps> = ({
  
     //once it runs for the guess word 
     guesses.forEach((guess, index) => {
-      rows.push(createRow(guess, false, index));
+      rows.push(createRow(guess, index));
     });
  
     //run the words again until the row is maxed 
     if (guesses.length < GAME_CONFIG.MAX_ATTEMPTS) {
-      rows.push(createRow(currentGuess, true, guesses.length));
+      rows.push(createRow(currentGuess, guesses.length));
     }
  
     //it is like a skelton design for showing the empty rows 
     for (let i = guesses.length + 1; i < GAME_CONFIG.MAX_ATTEMPTS; i++) {
-      rows.push(createRow('', false, i));
+      rows.push(createRow('', i));
     }
  
     return rows;

@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { GameState, type GameConfig, type GameGuess } from "../types/game";
+import { GameState, type GameGuess } from "../types/game";
 import {
   checkGuess,
   createGameGuess,
@@ -8,8 +8,8 @@ import {
   randomWord,
 } from "../utils/gameLogic";
 import { GAME_CONFIG } from "../utils/constant";
-import { TARGET_WORDS } from "../data/wordlist";
-import { ToastContainer, toast } from 'react-toastify';
+
+import {  toast } from 'react-toastify';
 
 interface UseWordleReturn {
   targetWord: string;
@@ -41,6 +41,7 @@ export const useWordle = (): UseWordleReturn => {
   const newGame = useCallback(() => {
 
      const word = randomWord();
+     console.log(word)
 
   setTargetWord(word);
     setGuesses([]);

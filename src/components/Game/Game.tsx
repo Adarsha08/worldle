@@ -4,7 +4,7 @@ import Keyboard from "../Keyboard/Keyboard";
 import Modal from "../Modal/Modal";
 import { useWordle } from "../../hooks/useWordle";
 import { GameState } from "../../types/game";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer,  } from 'react-toastify';
 
 function App() {
   const {
@@ -17,7 +17,6 @@ function App() {
     gameState,
     removeLetter,
     submitGuess,
-    targetWord,
     getModalMessage
   } = useWordle();
   return (
