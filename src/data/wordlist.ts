@@ -1,26 +1,35 @@
-export const VALID_WORDS: readonly string[] = [
-  "about",
-  "other",
-  "which",
-  "their",
-  "would",
-  "there",
-  "could",
-  "first",
-  "after",
-  "these",
-  "react",
-  "state",
-  "props",
-  "hooks",
-  "event",
-  "style",
-  "class",
-  "mount",
-  "render",
-  "scope",
-  // Add more 5-letter words...
-] as const;
+import words from "an-array-of-english-words";
+
+
+
+export const VALID_WORD_SET = new Set(
+  words
+    .filter((w) => w.length === 5)
+    .map((w) => w.toLowerCase())
+);
+// export const VALID_WORDS: readonly string[] = [
+//   "about",
+//   "other",
+//   "which",
+//   "their",
+//   "would",
+//   "there",
+//   "could",
+//   "first",
+//   "after",
+//   "these",
+//   "react",
+//   "state",
+//   "props",
+//   "hooks",
+//   "event",
+//   "style",
+//   "class",
+//   "mount",
+//   "render",
+//   "scope",
+//   // Add more 5-letter words...
+// ] as const;
  
 export const TARGET_WORDS: readonly string[] = [
   "react",
@@ -31,7 +40,6 @@ export const TARGET_WORDS: readonly string[] = [
   "style",
   "class",
   "mount",
-  "render",
   "scope",
   "array",
   "async",
@@ -46,5 +54,5 @@ export const TARGET_WORDS: readonly string[] = [
   // Add more target words...
 ] as const;
  
-export type ValidWord = (typeof VALID_WORDS)[number];
+
 export type TargetWord = (typeof TARGET_WORDS)[number];
