@@ -1,6 +1,5 @@
 import { VALID_WORD_SET } from "../data/validWords";
 import {
-  type ValidWord,
   TARGET_WORDS,
   type TargetWord,
 } from "../data/wordlist";

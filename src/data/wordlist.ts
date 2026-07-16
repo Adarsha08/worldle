@@ -46,5 +46,5 @@ export const TARGET_WORDS: readonly string[] = [
   // Add more target words...
 ] as const;
  
-export type ValidWord = (typeof VALID_WORDS)[number];
+
 export type TargetWord = (typeof TARGET_WORDS)[number];
