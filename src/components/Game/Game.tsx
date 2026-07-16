@@ -25,7 +25,7 @@ function App() {
       <div>
         <ToastContainer/>
         <header>
-          <h1 className="text-2xl flex m-5 font-bold justify-center">Worlde Game </h1>
+          <h1 className="text-2xl flex m-5 font-bold justify-center">Wordle Game </h1>
         </header>
         <Board
           guesses={guesses}
